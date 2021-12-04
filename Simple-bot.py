@@ -22,7 +22,13 @@ def start(message):
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'hi')
+    bot.send_message(message.chat.id, 'Выбери нужного тебе котика в кнопках, либо отправь:\n'\
+                                      '"Спит" - появится спящий котик;\n'\
+                                      '"Вампир" - появится котик Дракула;\n'\
+                                      '"Летит" - появится летающий котик;\n'\
+                                      '"Ест" - появится кушающий котик;\n'\
+                                      '"Наелся" - появится котик, который уже покушал;\n\n'\
+                                      'Удачи!')
 
 @bot.message_handler(content_types=['text'])
 def answer(message):
